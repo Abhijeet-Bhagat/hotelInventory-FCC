@@ -25,6 +25,9 @@
               "src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/indigo-pink.css",
+              "./node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -61,9 +64,11 @@
           "configurations": {
             "production": {
               "browserTarget": "test-app:build:production"
+              
             },
             "development": {
-              "browserTarget": "test-app:build:development"
+              "browserTarget": "test-app:build:development",
+              "proxyConfig": "src/proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"
@@ -87,6 +92,7 @@
               "src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
             "scripts": []

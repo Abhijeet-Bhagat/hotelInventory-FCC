@@ -1,0 +1,32 @@
+<div class="main">
+  <app-hotel-header></app-hotel-header>
+  <h2>Rooms</h2>
+  <h3 [ngStyle]="{ color: roomsAvailable > 0 ? 'green' : 'red' }">
+    Rooms Available: {{ roomsAvailable }}
+  </h3>
+  <!-- <p>Filter by price {{priceFilter.value| json}}</p> -->
+  <div>
+    <input type="number" class="form-control" [formControl]  = "priceFilter" placeholder="Filter by price..."/>
+  </div>
+  <app-rooms-table
+    color
+    [rooms]="roomslist"
+    [price]="priceFilter.value ||0"
+    [roomsAvailable]="roomsAvailable"
+    (roomsSelected)="onRoomSelect($event)"
+    (deleteRoomEvent)="deleteRoom($event)"
+  ></app-rooms-table>
+
+  <div class="btn-primary btn" (click)="addRoom()" (keydown.enter)="addRoom()">
+    Add Room
+  </div>
+  <div
+    class="btn-secondary btn"
+    (click)="editRoom()"
+    (keydown.enter)="editRoom()"
+  >
+    Edit Room
+  </div>
+</div>
+
+<router-outlet></router-outlet>

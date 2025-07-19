@@ -1,0 +1,25 @@
+<div class="container">
+  <h2>Directive Component</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Class</th>
+        <th>Roll No.</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let st of students">
+        <td>{{ st.name }}</td>
+        <td>{{ st.stuclass }}</td>
+        <td>{{ st.roll }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p [ngClass]="hasError ? 'error' : 'success'">This is styled by ngclass</p>
+  <p [ngStyle]="mystyle">This is styled by ngStyle</p>
+  <p appCustomHighlight="red">Custom attribute</p>
+
+  <p appTextDirective="48">Text change directive</p>
+</div>

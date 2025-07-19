@@ -1,0 +1,46 @@
+<div class="container">
+  <form #myform="ngForm" (ngSubmit)="onSubmit(myform)">
+    <table>
+      <tr>
+        <td>Name</td>
+        <td>
+          <input type="text" name="name" [(ngModel)]="user.name" required />
+        </td>
+      </tr>
+      <tr>
+        <td>Email</td>
+        <td>
+          <input type="email" name="email" [(ngModel)]="user.email" required />
+          <div *ngIf="myform.submitted && myform.valid"></div>
+        </td>
+      </tr>
+      <tr>
+        <td>Gender</td>
+        <td>
+          <input
+            type="radio"
+            name="gender"
+            value="male"
+            [(ngModel)]="user.gender"
+          />Male
+          <input
+            type="radio"
+            name="gender"
+            value="female"
+            [(ngModel)]="user.gender"
+          />Female
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button type="submit" [disabled]="!myform.valid">Submit</button>
+          <button type="reset">Clear</button>
+        </td>
+      </tr>
+    </table>
+  </form>
+</div>
+
+<div>
+  <p>{{ myform.valid }}</p>
+</div>

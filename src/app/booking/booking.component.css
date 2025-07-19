@@ -1,0 +1,78 @@
+/* Booking Form Styles */
+
+.example-form {
+  max-width: 700px;
+  margin: 32px auto;
+  padding: 32px 24px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08), 0 1.5px 4px rgba(0,0,0,0.04);
+}
+
+mat-form-field.example-full-width {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 32px;
+  font-weight: 500;
+  color: #3f51b5;
+  letter-spacing: 1px;
+}
+
+button[mat-raised-button] {
+  margin: 8px 8px 8px 0;
+  min-width: 120px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+mat-accordion {
+  margin-top: 32px;
+  background: #f5f7fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(63,81,181,0.06);
+  padding: 8px 0;
+}
+
+mat-expansion-panel {
+  background: #fafbfc;
+  border-radius: 8px !important;
+  margin-bottom: 12px;
+  box-shadow: 0 1px 4px rgba(63,81,181,0.04);
+}
+
+mat-expansion-panel-header {
+  font-weight: 500;
+  color: #3f51b5;
+  font-size: 1.1rem;
+}
+
+/* Guest Details Section */
+[formArrayName="guests"] > div {
+  background: #f0f4ff;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  padding: 16px 12px;
+  box-shadow: 0 1px 4px rgba(63,81,181,0.04);
+}
+
+/* Responsive Design */
+@media (max-width: 800px) {
+  .example-form {
+    padding: 16px 4px;
+  }
+}
+
+@media (max-width: 600px) {
+  .example-form {
+    max-width: 100%;
+    padding: 8px 0;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+}
+  

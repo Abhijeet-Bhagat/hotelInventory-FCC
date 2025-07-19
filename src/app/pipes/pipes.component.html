@@ -1,0 +1,8 @@
+<p>Pipes component</p>
+<p>Default Date: {{ today | date }}</p>
+<p>Short Date: {{ today | date : "short" }}</p>
+<p>Medium Date: {{ today | date : "medium" }}</p>
+<p>Full Date: {{ today | date : "fullDate" }}</p>
+<p>Custom format: {{ today | date : "yyyy-mm-dd hh:mm:ss" }}</p>
+<p>Formatted date: {{ formatted }}</p>
+<p>{{ "Angular is awesome and this is custom pipe" | shorten : 18 }}</p>

@@ -1,0 +1,9 @@
+<div class="container">
+  <p>parent component</p>
+  <h2>{{ taskmsg }}</h2>
+  <app-child-comp [name]="'Mirage'" (taskCompleted)="parentdone($event)">
+  </app-child-comp>
+
+  <button (click)="start()">Start Timer</button>
+  <button (click)="stop()">Stop Timer</button>
+</div>

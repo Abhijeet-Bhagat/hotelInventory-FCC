@@ -1,0 +1,12 @@
+<div>
+  <h1>Header component</h1>
+  <h1>{{ counter }}</h1>
+  <button (click)="incrCounter()">Increase</button>
+  <button (click)="decrCounter()">Decrease</button>
+
+  <h1>Live Input: {{ input }}</h1>
+  <input type="text" name="" id="" (input)="onInput($event)" />
+
+  <h1>Keyup Event</h1>
+  <input type="text" (keyup.Enter)="onEnter($event)" />
+</div>

@@ -1,0 +1,87 @@
+<h1>Add Room</h1>
+<!-- {{ room | json }} -->
+<p>Errors: {{ roomsForm.errors }}</p>
+<p>Valid: {{ roomsForm.valid }}</p>
+<p>Invalid: {{ roomsForm.invalid }}</p>
+<p>Dirty: {{ roomsForm.dirty }}</p>
+<p>Pristine: {{ roomsForm.pristine }}</p>
+<br />
+
+<div *ngIf="successMessage !== ''" class="alert alert-success">
+  {{ successMessage }}
+</div>
+
+<form #roomsForm="ngForm" (ngSubmit)="addRoom(roomsForm)">
+  <div class="form-group">
+    <input
+      #roomtype="ngModel"
+      class="form-control"
+      type="text"
+      name="roomType"
+      placeholder="Room Type"
+      [(ngModel)]="room.roomType"
+      required
+    />
+  </div>
+  <div
+    class="alert alert-danger"
+    *ngIf="roomsForm.dirty && roomtype.errors?.['required']"
+  >
+    <p>Room Type is required!</p>
+  </div>
+  <div>
+    <input
+      class="form-control"
+      type="number"
+      name="price"
+      placeholder="Price"
+      [(ngModel)]="room.price"
+      required
+    />
+  </div>
+  <div>
+    <input
+      class="form-control"
+      type="text"
+      name="description"
+      placeholder="Description"
+      [(ngModel)]="room.description"
+      required
+    />
+  </div>
+  <div>
+    <input
+      #amenities="ngModel"
+      class="form-control"
+      type="text"
+      name="amenities"
+      placeholder="Amenities"
+      [(ngModel)]="room.amenities"
+      minlength="5"
+      maxlength="20"
+      required
+    />
+  </div>
+  <div class="alert alert-danger" *ngIf="amenities.errors?.['minlength']">
+    <p>Amenities should be at least 5 characters!</p>
+  </div>
+  <div>
+    <input
+      class="form-control"
+      type="datetime"
+      name="checkinTime"
+      placeholder="Check-In Time"
+      [(ngModel)]="room.checkinTime"
+      required
+    />
+  </div>
+  <div>
+    <button
+      [disabled]="roomsForm.invalid"
+      type="submit"
+      class="btn btn-primary"
+    >
+      Submit
+    </button>
+  </div>
+</form>

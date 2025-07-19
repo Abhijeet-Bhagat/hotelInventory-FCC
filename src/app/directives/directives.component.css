@@ -1,0 +1,29 @@
+.container{
+    padding: 20px;
+    border: 1px solid orange;
+    background-color: antiquewhite;
+}
+
+table, th, td {
+    border: 1px solid;
+    border-collapse: collapse;
+    width: 40%;
+    align-items: center;
+
+  }
+
+  .success {
+    color: green;
+    font-weight: bold;
+  }
+  
+  .error {
+    color: red;
+    font-weight: bold;
+  }
+  
+  .box {
+    padding: 10px;
+    border: 2px solid black;
+  }
+  

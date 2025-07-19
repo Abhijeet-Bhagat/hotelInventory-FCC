@@ -1,0 +1,11 @@
+<div>
+  <p>two-way-binding works</p>
+  <h1>Greetings: {{ name }}</h1>
+  <input type="text" [(ngModel)]="name" />
+</div>
+<!-- Temperature Converter -->
+
+<div>
+  <input [(ngModel)]="temp" name="Enter Temperature in Celsius" id="" />
+  <p>Temperature in Fahrenheit: {{ (temp * 9) / 5 + 32 }}</p>
+</div>
